@@ -74,20 +74,7 @@ where
 /* END OF DAY 01: WRITING MY FIRST QUERIES */
 
 /* DAY 02: MASTERING THE FUNDAMENTALS */
-
--- 1. *Get the daily positivity rate for each region. Show data only for October 20, 2020 – October 25, 2020 and order results by date then by region name.*
-
-
-
--- 2. *From your answer in 1 (i.e. using the same columns and conditions), which region and date registered the highest positivity rate? Adjust your query accordingly* 
-
-
-
--- 3. *Show the total confirmed cases for each province in Veneto (5), for Nov 30, 2020,  Dec 31, 2020 and Jan 31, 2021 only.*
-
-
-
--- 4. *Which day had the highest positivity rate in the month of December 2020, for* Toscana (9)
+-- 1. *Which day had the highest positivity rate in the month of December 2020, for* Toscana (9)
 
 select
   date(R.date) as date_reported
@@ -103,7 +90,7 @@ order by
   4 desc
 Limit 1;
 
--- 5. *Which days registered the highest increase of current confirmed cases Consider  June 2020, October 2020, December 2020, and March 2021, in Sicilia (19) and Basilicata (17) only.*
+-- 2. *Which days registered the highest increase of current confirmed cases Consider  June 2020, October 2020, December 2020, and March 2021, in Sicilia (19) and Basilicata (17) only.*
 
 select
   date(R.date) as date_reported
@@ -122,7 +109,7 @@ where
 order by
   4 desc;
 
--- 6. *Which days and regions had a negative increase in current confirmed cases? Consider only region names that start with the letter ‘P’, and January 01 – October 25 for both years 2020 and 2021 only. Sort output by date.*
+-- 3. *Which days and regions had a negative increase in current confirmed cases? Consider only region names that start with the letter ‘P’, and January 01 – October 25 for both years 2020 and 2021 only. Sort output by date.*
 
 select
   date(R.date) as date_reported
@@ -139,7 +126,7 @@ where
   )
 order by 1;
 
--- 7. *From your answer in the previous question (i.e. using the same columns and conditions), which day and region registered the lowest case count? Adjust your query accordingly.*
+-- 4. *From your answer in the previous question (i.e. using the same columns and conditions), which day and region registered the lowest case count? Adjust your query accordingly.*
 
 select
   date(R.date) as date_reported
